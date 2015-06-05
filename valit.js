@@ -43,7 +43,11 @@
 					{
 						pass_validation = false;
 						error_message.push(valit_required);
-					} 
+					}
+					else
+					{
+						error_message.splice($.inArray(valit_required, error_message),1);
+					}
 				}
 				
 				if ($(this).data('valit-email'))
